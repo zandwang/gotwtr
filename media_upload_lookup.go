@@ -163,7 +163,7 @@ func appendChunkedUpload(ctx context.Context, c *client, req *MediaUploadAppendR
 	if req.MediaID == "" {
 		return errors.New("append chunked upload: media_id is required")
 	}
-	if req.Media == nil || len(req.Media) == 0 {
+	if len(req.Media) == 0 {
 		return errors.New("append chunked upload: media data is required")
 	}
 

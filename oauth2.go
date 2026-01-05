@@ -127,7 +127,7 @@ func (c *client) InvalidateToken(ctx context.Context) (*InvalidateTokenResponse,
 		}
 	}
 
-	// トークンを無効化したのでクライアントからも削除
+	// Clear the token from the client since it has been invalidated
 	c.bearerToken = ""
 
 	return &invalidateTokenResponse, nil
